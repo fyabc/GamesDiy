@@ -30,6 +30,7 @@ N_EXPERIMENTS = 10000
 def get():
     return True if random() < P_CARD else False
 
+
 def experiment():
     hand = [get() for _ in range(INIT_HAND)]
 
