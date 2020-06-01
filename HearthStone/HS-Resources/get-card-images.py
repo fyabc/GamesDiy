@@ -20,26 +20,30 @@ NUM_SCROLL = 120
 
 
 def get_html():
-    browser=  webdriver.Chrome()
+    # [NOTE]: geckodriver was installed at E:/MyBins/geckodriver.exe.
+    browser=  webdriver.Firefox()
     browser.get('http://cha.17173.com/hs/')
 
     for i in range(120):
-        browser.execute_script('var q=document.documentElement.scrollTop='+str(i*1000))
+        browser.execute_script('var q=document.documentElement.scrollTop=' + str(i * 1000))
         time.sleep(1)
 
     time.sleep(3)
-    html = browser.page_source.encode('GBK', 'ignore').decode('GBk')
+    html = browser.page_source.encode('gbk', 'ignore').decode('gbk')
     browser.close()
     return html
 
 
-def get_imgs(html):    
+def get_imgs():
+    html = get_html()
     img_urls = re.findall(r'return false;" target=""><img src="(.*?)"', html)
     for img_url in img_urls:
         img_url = img_url.split('?')[0]
         img_content = requests.get(img_url).content
-        with open(_CARDS_ROOT / img_url.split('/')[-1],'wb') as f:
+        output_filename = _CARDS_ROOT / img_url.split('/')[-1]
+        with open(output_filename, 'wb') as f:
             f.write(img_content)
+        print('Image saved to {}'.format(output_filename))
 
 
 def get_orig_paintings():
@@ -50,13 +54,15 @@ def get_orig_paintings():
         url = item.find('img').attr('lz_src')
         url_content = requests.get(url).content
         name = item.find('.kp-name').text()
-        with open(_ORIGINS_ROOT / name + '.jpg', 'wb') as f:
+        output_filename = _ORIGINS_ROOT / (name + '.jpg')
+        with open(output_filename, 'wb') as f:
             f.write(url_content)
+        print('Image saved to {}'.format(output_filename))
 
 
 def main():
-    html = get_html()
-    get_imgs(html)
+    get_imgs()
+    # get_orig_paintings()
 
 
 if __name__ == '__main__':
