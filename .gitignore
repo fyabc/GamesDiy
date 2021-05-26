@@ -111,6 +111,3 @@ ENV/
 
 # HearthStone Resources
 /HearthStone/HS-Resources/data/*
-
-# QSanGuoSha Data
-/SanGuoSha/SGS-Scripts/QSGS-Data/
