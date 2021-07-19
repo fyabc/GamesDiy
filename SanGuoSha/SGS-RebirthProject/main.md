@@ -90,3 +90,6 @@
 1. 武将的平衡性设计参考了[这篇文章](https://zhuanlan.zhihu.com/p/41804782)。
 2. 部分武将的设计创意来自于这个系列：[1](https://zhuanlan.zhihu.com/p/58644621)、[2](https://zhuanlan.zhihu.com/p/59212688)、[3](https://zhuanlan.zhihu.com/p/58921610)、[4](https://zhuanlan.zhihu.com/p/59131515)、[5](https://zhuanlan.zhihu.com/p/59344207)，在之后的部分不再另加引用。
 3. 三国事典：<https://www.rottk.com/>
+4. 三国演义全文：<http://www.purepen.com/sgyy/>
+5. 三国志全文：<http://www.guoxuemeng.com/guoxue/sanguozhi/>
+6. 后汉书全文：<http://www.guoxuemeng.com/guoxue/houhanshu/>
