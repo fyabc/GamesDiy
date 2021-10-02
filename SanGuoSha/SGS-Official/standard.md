@@ -61,6 +61,13 @@
       2. -1马 3 1.863% （♥5赤兔、♦K紫骍、♠K大宛）
    4. 宝物 1 0.621%
 
+----
+
+1. 一些图表
+
+- 按点数的各类别牌比例分布 ![按点数的各类别牌比例分布](./assets/images/Std-CardNumDistribution.png)
+- 按花色的各类别牌比例分布 ![按花色的各类别牌比例分布](./assets/images/Std-CardSuitDistribution.png)
+
 ### 标准版
 
 | 花色\点数 |    A     |   2    |    3     |    4     |   5    |   6    |    7     |    8     |    9     |  10   |    J     |    Q     |    K     |
