@@ -70,7 +70,7 @@
    3. SP武将：貂蝉2
    4. 神武将：貂蝉
 3. 诸侯讨董（190 - 191）
-   1. 武将：华雄、徐荣、李肃、牛辅、孔融、韩馥、鲍信、桥瑁
+   1. 武将：华雄、徐荣、李肃、牛辅、孔融、韩馥、鲍信、刘虞
    2. 已出现武将：暂无
    3. SP武将：袁绍2、曹操2、孙坚2、袁术2
    4. 神武将：吕布
@@ -79,8 +79,8 @@
    2. 已出现武将：暂无
    3. SP武将：刘协2
    4. 神武将：贾诩
-5. 徐州风云（194 - 195）
-6. 江东定基（194 - 200）
+5. 江东定基（194 - 200）
+6. 徐州风云（194 - 195）
 7. 迎驾许都（196）
 8. 宛城之战（197）
 9. 白门楼（198）
@@ -140,7 +140,7 @@
 2. 部分武将的设计创意来自于这个系列：[1](https://zhuanlan.zhihu.com/p/58644621)、[2](https://zhuanlan.zhihu.com/p/59212688)、[3](https://zhuanlan.zhihu.com/p/58921610)、[4](https://zhuanlan.zhihu.com/p/59131515)、[5](https://zhuanlan.zhihu.com/p/59344207)，在之后的部分不再另加引用。
 3. 三国事典：<https://www.rottk.com/>
 4. 三国演义全文：<http://www.purepen.com/sgyy/>
-5. 三国志全文：<http://www.guoxuemeng.com/guoxue/sanguozhi/>
+5. 三国志全文（带裴松之注）：<http://www.guoxue123.com/shibu/0101/00sgz/>
 6. 后汉书全文：<http://www.guoxuemeng.com/guoxue/houhanshu/>
 
 ## 待完成（TODOs）
