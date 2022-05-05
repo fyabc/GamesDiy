@@ -162,7 +162,8 @@
 3. 三国事典：<https://www.rottk.com/>
 4. 三国演义全文：<http://www.purepen.com/sgyy/>
 5. 三国志全文（带裴松之注）：<http://www.guoxue123.com/shibu/0101/00sgz/>
-6. 后汉书全文：<http://www.guoxuemeng.com/guoxue/houhanshu/>
+6. 后汉书全文（带翻译）：<http://www.guoxuemeng.com/guoxue/houhanshu/>
+7. 后汉书全文：<http://www.guoxue123.com/shibu/0101/00hhs/index.htm>
 
 ## 杂项
 
