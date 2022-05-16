@@ -70,77 +70,77 @@
 
 ### 游戏牌说明
 
-1. ![血杀](./assets/images/cards/E4-XX-血杀.png) 血【杀】：基本  
+1. ![血杀](../assets/images/cards/E4-XX-血杀.png) 血【杀】：基本  
    属于【杀】的一种。当你使用血【杀】造成伤害时，你可以进行判定，若结果不小于4X（X为你的体力值），你回复1点体力。
 
    > 血【杀】造成的伤害为普通伤害。
    > 考虑到该扩展的大量AOE，增加血【杀】，为低血量角色提供一个额外的回复机会。
-2. ![文和乱武](./assets/images/cards/E4-SA-文和乱武.png) 【文和乱武】：锦囊，普通  
+2. ![文和乱武](../assets/images/cards/E4-SA-文和乱武.png) 【文和乱武】：锦囊，普通  
    出牌阶段，对所有其他角色使用。目标角色依次选择一项：1.对其最近的另一名角色使用一张【杀】；2.失去1点体力。
 
    > 引文：“我自冷眼看世界，不闻天下是与非。”  
    > ♠A和♦K，一头一尾各一张【文和乱武】，显示扩展主题。  
-3. ![析骸而爨](./assets/images/cards/E4-XX-析骸而爨.png) 【析骸而爨】：锦囊，普通  
+3. ![析骸而爨](../assets/images/cards/E4-XX-析骸而爨.png) 【析骸而爨】：锦囊，普通  
    当一名角色脱离濒死状态后，对你或该角色使用。目标角色摸三张牌。  
    当一名角色死亡后，对至多三名角色使用。目标角色回复1点体力。  
 
    > 引文：“华元曰：‘敝邑易子而食，析骸以爨。’” ——《左传·宣公十五年》  
    > 以“分食尸体”的效果契合锦囊的名称。  
    > 为提高该锦囊的使用频率，设定了两个使用时机。  
-4. ![绝处逢生](./assets/images/cards/E4-XX-绝处逢生.png) 【绝处逢生】：锦囊，普通  
+4. ![绝处逢生](../assets/images/cards/E4-XX-绝处逢生.png) 【绝处逢生】：锦囊，普通  
    当你受到基本牌或锦囊牌造成的伤害时，对此牌使用。防止此伤害，然后若你的体力值为唯一最小，你回复1点体力。
 
    > 参考了官方的【金蝉脱壳】和【草船借箭】的设计，增加额外的回复功能，作为【无懈可击】的替代品。  
-5. ![饥荒](./assets/images/cards/E4-XX-饥荒.png) 【饥荒】：锦囊，延时  
+5. ![饥荒](../assets/images/cards/E4-XX-饥荒.png) 【饥荒】：锦囊，延时  
    出牌阶段，对距离1以内的一名角色使用。将【饥荒】放置于该角色的判定区里。若判定结果为♣2~9，则目标角色弃置四张牌且跳过本回合的摸牌阶段。若判定不为此结果，将之移动到下家的判定区里。
 
    > 模仿【闪电】的效果，并扩大目标范围。  
-6. ![飞熊狼牙棒](./assets/images/cards/E4-XX-飞熊狼牙棒.png) 【飞熊狼牙棒】：装备，武器 攻击范围：3  
+6. ![飞熊狼牙棒](../assets/images/cards/E4-XX-飞熊狼牙棒.png) 【飞熊狼牙棒】：装备，武器 攻击范围：3  
 
    > 生造的李傕/飞熊军的武器，飞熊军来源于官方“诸侯伐董”模式。  
-7. ![豹掠弯刀](./assets/images/cards/E4-XX-豹掠弯刀.png) 【豹掠弯刀】：装备，武器 攻击范围：2  
+7. ![豹掠弯刀](../assets/images/cards/E4-XX-豹掠弯刀.png) 【豹掠弯刀】：装备，武器 攻击范围：2  
 
    > 生造的郭汜/豹掠军的武器，豹掠军来源于官方“诸侯伐董”模式。  
-8. ![虎贲巨锤](./assets/images/cards/E4-XX-虎贲巨锤.png) 【虎贲巨锤】：装备，武器 攻击范围：3  
+8. ![虎贲巨锤](../assets/images/cards/E4-XX-虎贲巨锤.png) 【虎贲巨锤】：装备，武器 攻击范围：3  
 
    > 生造的樊稠/虎贲军的武器，虎贲军来源于官方“诸侯伐董”模式。  
-9. ![龙骧长枪](./assets/images/cards/E4-XX-龙骧长枪.png) 【龙骧长枪】：装备，武器 攻击范围：4  
+9. ![龙骧长枪](../assets/images/cards/E4-XX-龙骧长枪.png) 【龙骧长枪】：装备，武器 攻击范围：4  
 
    > 生造的张济/龙骧军的武器，龙骧军来源于官方“诸侯伐董”模式。  
-10. ![鱼鳞甲](./assets/images/cards/E4-XX-鱼鳞甲.png) 【鱼鳞甲】：装备，防具  
+10. ![鱼鳞甲](../assets/images/cards/E4-XX-鱼鳞甲.png) 【鱼鳞甲】：装备，防具  
 
     > 引文：“幡旗如鸟翼，甲胄似鱼鳞。” ——杨炯
-11. ![乘舆大驾](./assets/images/cards/E4-XX-乘舆大驾.png) 【乘舆大驾】：装备，-1马  
+11. ![乘舆大驾](../assets/images/cards/E4-XX-乘舆大驾.png) 【乘舆大驾】：装备，-1马  
 
     > 引文：“乘舆大驾，公卿奉引，大仆卿，大将军参乘。属车八十一乘，备千乘万骑。西都行祠天郊，甘泉备之。” ——《后汉书.舆服志》  
-12. ![拂尘](./assets/images/cards/E4-XX-拂尘.png) 【拂尘】：装备，宝物  
+12. ![拂尘](../assets/images/cards/E4-XX-拂尘.png) 【拂尘】：装备，宝物  
 
 ----
 
 来自其他扩展的游戏牌：
 
-1. ![盗贼蜂起](./assets/images/cards/E1-C6-盗贼蜂起.png)
+1. ![盗贼蜂起](../assets/images/cards/E1-C6-盗贼蜂起.png)
 
 ## 武将
 
-1. ![李傕](./assets/images/heroes/E4-李傕.png) 李傕 男 群 4体力 QUN023
-2. ![郭汜](./assets/images/heroes/E4-郭汜.png) 郭汜 男 群 4体力 QUN024
-3. ![樊稠](./assets/images/heroes/E4-樊稠.png) 樊稠 男 群 4体力 QUN025
-4. ![张济](./assets/images/heroes/E4-张济.png) 张济 男 群 4体力 QUN026
-5. ![杨奉&韩暹](./assets/images/heroes/E4-杨奉-韩暹.png) 杨奉&韩暹 男 汉 4体力 HAN015
+1. ![李傕](../assets/images/heroes/E4-李傕.png) 李傕 男 群 4体力 QUN023
+2. ![郭汜](../assets/images/heroes/E4-郭汜.png) 郭汜 男 群 4体力 QUN024
+3. ![樊稠](../assets/images/heroes/E4-樊稠.png) 樊稠 男 群 4体力 QUN025
+4. ![张济](../assets/images/heroes/E4-张济.png) 张济 男 群 4体力 QUN026
+5. ![杨奉&韩暹](../assets/images/heroes/E4-杨奉-韩暹.png) 杨奉&韩暹 男 汉 4体力 HAN015
    1. 【护归】：
-6. ![董承](./assets/images/heroes/E4-董承.png) 董承 男 汉 4体力 HAN016
-7. ![杨彪](./assets/images/heroes/E4-杨彪.png) 杨彪 男 汉 3体力 HAN017
-8. ![张杨](./assets/images/heroes/E4-张杨.png) 张杨 男 汉 4体力 HAN018
+6. ![董承](../assets/images/heroes/E4-董承.png) 董承 男 汉 4体力 HAN016
+7. ![杨彪](../assets/images/heroes/E4-杨彪.png) 杨彪 男 汉 3体力 HAN017
+8. ![张杨](../assets/images/heroes/E4-张杨.png) 张杨 男 汉 4体力 HAN018
 
 ----
 
-1. ![SP刘协](./assets/images/heroes/E4-SP刘协.png) 刘协 男 汉 2体力/3上限 SP-HAN001 称号：危机四伏
+1. ![SP刘协](../assets/images/heroes/E4-SP刘协.png) 刘协 男 汉 2体力/3上限 SP-HAN001 称号：危机四伏
    1. 【危境】：每回合限一次，你可以将X张手牌当【绝处逢生】使用（X为你的体力值），然后若你的手牌最少，你摸一张牌。
    2. 【劝和】：TODO
    3. 【某某】：**主公技**，TODO
-2. ![SP徐晃](./assets/images/heroes/E4-SP徐晃.png) 徐晃 男 汉 4体力 SP-WEI-TODO
+2. ![SP徐晃](../assets/images/heroes/E4-SP徐晃.png) 徐晃 男 汉 4体力 SP-WEI-TODO
 
 ----
 
-1. ![神贾诩](./assets/images/heroes/E4-神贾诩.png) 贾诩 男 神 3体力 LE004
+1. ![神贾诩](../assets/images/heroes/E4-神贾诩.png) 贾诩 男 神 3体力 LE004
