@@ -164,6 +164,8 @@
 5. 三国志全文（带裴松之注）：<http://www.guoxue123.com/shibu/0101/00sgz/>
 6. 后汉书全文（带翻译）：<http://www.guoxuemeng.com/guoxue/houhanshu/>
 7. 后汉书全文：<http://www.guoxue123.com/shibu/0101/00hhs/index.htm>
+8. 其他参考资料：
+   1. 《襄阳耆旧记》（作者：习凿齿）：<http://www.guoxue123.com/biji/qing/0000/043.htm>
 
 ## 杂项
 
