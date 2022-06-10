@@ -165,7 +165,11 @@
 6. 后汉书全文（带翻译）：<http://www.guoxuemeng.com/guoxue/houhanshu/>
 7. 后汉书全文：<http://www.guoxue123.com/shibu/0101/00hhs/index.htm>
 8. 其他参考资料：
-   1. 《襄阳耆旧记》（作者：习凿齿）：<http://www.guoxue123.com/biji/qing/0000/043.htm>
+   1. 《英雄记》（作者：王粲）
+      1. 百科：<https://baike.baidu.com/item/%E8%8B%B1%E9%9B%84%E8%AE%B0/5827119>
+      2. 原文：<http://www.guoxue123.com/biji/han/0000/033.htm>
+   2. 《襄阳耆旧记》（作者：习凿齿）
+      1. 原文：<http://www.guoxue123.com/biji/qing/0000/043.htm>
 
 ## 杂项
 
