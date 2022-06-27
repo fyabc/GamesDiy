@@ -128,7 +128,7 @@
 3. ![樊稠](../assets/images/heroes/E4-樊稠.png) 樊稠 男 群 4体力 QUN025
 4. ![张济](../assets/images/heroes/E4-张济.png) 张济 男 群 4体力 QUN026
 5. ![杨奉&韩暹](../assets/images/heroes/E4-杨奉-韩暹.png) 杨奉&韩暹 男 汉 4体力 HAN015
-   1. 【护归】：
+    1. 【护归】：
 6. ![董承](../assets/images/heroes/E4-董承.png) 董承 男 汉 4体力 HAN016
 7. ![杨彪](../assets/images/heroes/E4-杨彪.png) 杨彪 男 汉 3体力 HAN017
 8. ![张杨](../assets/images/heroes/E4-张杨.png) 张杨 男 汉 4体力 HAN018
@@ -136,10 +136,11 @@
 ----
 
 1. ![SP刘协](../assets/images/heroes/E4-SP刘协.png) 刘协 男 汉 2体力/3上限 SP-HAN001 称号：危机四伏
-   1. 【危境】：每回合限一次，你可以将X张手牌当【绝处逢生】使用（X为你的体力值），然后若你的手牌最少，你摸一张牌。
-   2. 【劝和】：TODO
-   3. 【某某】：**主公技**，TODO
+    1. 【危境】：每回合限一次，你可以将X张手牌当【绝处逢生】使用（X为你的体力值），然后若你的手牌最少，你摸一张牌。
+    2. 【劝和】：TODO
+    3. 【某某】：**主公技**，TODO
 2. ![SP徐晃](../assets/images/heroes/E4-SP徐晃.png) 徐晃 男 汉 4体力 SP-WEI-TODO
+    1. 【治严】：
 
 ----
 
