@@ -164,12 +164,22 @@
 5. 三国志全文（带裴松之注）：<http://www.guoxue123.com/shibu/0101/00sgz/>
 6. 后汉书全文（带翻译）：<http://www.guoxuemeng.com/guoxue/houhanshu/>
 7. 后汉书全文：<http://www.guoxue123.com/shibu/0101/00hhs/index.htm>
-8. 其他参考资料：
-   1. 《英雄记》（作者：王粲）
+8. 资治通鉴全文：<http://www.guoxue123.com/shibu/0101/01zztj/index.htm>
+   1. 具体目录：卷五十八（181-187）至卷八十一（280-288）
+9.  其他参考资料：
+   1. 《孙子兵法》
+      1. 原文：<http://www.guoxue123.com/zhibu/0201/00sz/index.htm>
+      2. 带翻译：<http://www.guoxuemeng.com/guoxue/sunzibingfa/>
+   2. 《英雄记》（作者：王粲）
       1. 百科：<https://baike.baidu.com/item/%E8%8B%B1%E9%9B%84%E8%AE%B0/5827119>
       2. 原文：<http://www.guoxue123.com/biji/han/0000/033.htm>
-   2. 《襄阳耆旧记》（作者：习凿齿）
+   3. 《襄阳耆旧记》（作者：习凿齿）
       1. 原文：<http://www.guoxue123.com/biji/qing/0000/043.htm>
+   4. 《古今刀剑录》（作者：陶弘景）
+      1. 原文：<http://www.guoxue123.com/zhibu/0201/0200/210.htm>
+   5. 《续后汉书》（作者：郝经）
+   6. 《十七史百将传》（作者：张预）
+      1. 原文：<http://www.guoxue123.com/shibu/0201/01bjz/index.htm>
 
 ## 杂项
 
