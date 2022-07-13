@@ -180,6 +180,7 @@
    5. 《续后汉书》（作者：郝经）
    6. 《十七史百将传》（作者：张预）
       1. 原文：<http://www.guoxue123.com/shibu/0201/01bjz/index.htm>
+   7. [搜韵网-词典功能](https://sou-yun.cn/AllusionsIndex.aspx?sort=People)
 
 ## 杂项
 

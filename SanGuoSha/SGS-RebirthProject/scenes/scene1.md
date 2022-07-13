@@ -220,9 +220,10 @@
     2. 【符篆】：出牌阶段限一次，你可以将一张黑色普通锦囊牌当【黄巾雷符】使用。
     3. 【助祭】：当一名角色造成雷电伤害时，你可以令其进行判定，若结果为：黑色，该角色获得此牌；红色，你获得此牌。
 6. ![张曼成](../assets/images/scenes/scene1/S1.HJ006-张曼成.jpg) S1.HJ006 张曼成 男 群 4体力 称号：南阳渠帅
+   1. 【蜂集】：每轮限一次，一名敌方角色的准备阶段，你可以令所有友方角色各摸一张牌。若如此做，本回合友方角色受到伤害后，该角色弃置两张牌。
 7. ![马元义](../assets/images/scenes/scene1/S1.HJ007-马元义.jpg) S1.HJ007 马元义 男 群 4体力 称号：血动黄帆
 8. ![波才](../assets/images/scenes/scene1/S1.HJ008-波才.jpg) S1.HJ008 波才 男 群 4体力 称号：黄巾先锋
-9. ![程远志](../assets/images/scenes/scene1/S1.HJ009-程远志.jpg) S1.HJ009 程远志 男 群 4体力 称号：TODO
+9.  ![程远志](../assets/images/scenes/scene1/S1.HJ009-程远志.jpg) S1.HJ009 程远志 男 群 4体力 称号：TODO
 10. ![严政](./assets/images/scenes/scene1/S1.HJ010-严政.jpg) S1.HJ010 严政 男 群 4体力 称号：TODO
     1. TODO：黄巾阵营中，给严政设计劣势下通敌属性
 
