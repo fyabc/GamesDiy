@@ -2,6 +2,8 @@
 
 ## 新概念
 
+1. TODO：与“水师”和装备相关的新机制/新概念
+
 ## 特殊玩法说明
 
 ## 游戏牌
@@ -39,7 +41,6 @@
       - 借刀 2 无中 4 无懈 3
       - 南蛮 3 万箭 1 桃园 1
       - 五谷 2 火攻 2 铁索 3
-      - 乱武 2 (2)
    2. 延时 5 (XX) 4.2688%
       - 闪电 1 乐 2 兵 2
 3. *装备牌* 22 (XX) 17.073%
@@ -48,7 +49,7 @@
    3. 坐骑 6 (XX) 4.268%
       1. +1马 3 2.439%
       2. -1马 3 1.829%
-   4. 宝物 2 (1) 1.220%
+   4. 宝物 1 (XX) 1.220%
 
 > 说明：
 
@@ -58,8 +59,8 @@
 
 1. ![太史慈](../assets/images/heroes/E5-太史慈.png) 太史慈 男 吴 4体力 WU0XX
 2. ![大乔](../assets/images/heroes/E5-大乔.png) 大乔 女 吴 3体力 WU0XX
-3. ![吴景](../assets/images/heroes/E5-吴景.png) 吴景 男 吴 4体力 WU0XX
-4. ![孙贲](../assets/images/heroes/E5-孙贲.png) 孙贲 男 吴 4体力 WU0XX
+3. ![小乔](../assets/images/heroes/E5-小乔.png) 大乔 女 吴 3体力 WU0XX
+4. ![吴景](../assets/images/heroes/E5-吴景.png) 吴景 男 吴 4体力 WU0XX
 5. ![黄祖](../assets/images/heroes/E5-黄祖.png) 黄祖 男 群 4体力 QUN0XX
 6. ![刘繇](../assets/images/heroes/E5-刘繇.png) 刘繇 男 群 3体力 QUN0XX
 7. ![严白虎](../assets/images/heroes/E5-严白虎.png) 严白虎 男 群 4体力 QUN0XX
