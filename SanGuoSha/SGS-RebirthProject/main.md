@@ -228,6 +228,9 @@
    7. 《季汉辅臣赞》（作者：杨戏）
       1. 原文：见《三国志·蜀书·邓张宗杨传第十五》
    8. [搜韵网-词典功能](https://sou-yun.cn/AllusionsIndex.aspx?sort=People)
+   9. 《全三国文》（辑录：严可均）
+      1. 原文：<https://www.zhonghuashu.com/wiki/%E5%85%A8%E4%B8%89%E5%9C%8B%E6%96%87>
+      2. 原文2：<https://www.zhonghuadiancang.com/lishizhuanji/quansanguowen/>
 
 ## 杂项
 
