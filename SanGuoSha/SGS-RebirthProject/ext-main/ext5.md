@@ -78,7 +78,7 @@
 
 1. ![太史慈](../assets/images/heroes/E5-太史慈.png) 太史慈 男 吴 4体力 WU0XX
 2. ![大乔](../assets/images/heroes/E5-大乔.png) 大乔 女 吴 3体力 WU0XX
-3. ![小乔](../assets/images/heroes/E5-小乔.png) 大乔 女 吴 3体力 WU0XX
+3. ![小乔](../assets/images/heroes/E5-小乔.png) 小乔 女 吴 3体力 WU0XX
 4. ![吴景](../assets/images/heroes/E5-吴景.png) 吴景 男 吴 4体力 WU0XX
 5. ![黄祖](../assets/images/heroes/E5-黄祖.png) 黄祖 男 群 4体力 QUN0XX
 6. ![刘繇](../assets/images/heroes/E5-刘繇.png) 刘繇 男 群 3体力 QUN0XX
