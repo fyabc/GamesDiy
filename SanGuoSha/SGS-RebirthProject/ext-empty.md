@@ -1,4 +1,4 @@
-# 三国杀重生计划 扩展包N：XXXX（AAA - BBB）
+# 三国杀重置计划 扩展包N：XXXX（AAA - BBB）
 
 ## 新概念
 
