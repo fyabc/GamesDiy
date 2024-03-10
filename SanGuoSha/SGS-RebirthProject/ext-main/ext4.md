@@ -138,11 +138,11 @@
    2. 【噬骨】：每回合限一次，你可以将一张黑色手牌当血【杀】或【析骸而爨】使用。
 3. ![樊稠](../assets/images/heroes/E4-樊稠.png) 樊稠 男 群-董 4体力/5上限 QUN025
 4. ![张济](../assets/images/heroes/E4-张济.png) 张济 男 群-董 4体力/5上限 QUN026
-5. ![杨奉&韩暹](../assets/images/heroes/E4-杨奉-韩暹.png) 杨奉&韩暹 男 汉 4体力 HAN015
+5. ![杨奉&韩暹](../assets/images/heroes/E4-杨奉-韩暹.png) 杨奉&韩暹 男 汉 4体力 HAN017
     1. 【护归】：
-6. ![杨彪](../assets/images/heroes/E4-杨彪.png) 杨彪 男 汉 3体力 HAN016
-7. ![段煨](../assets/images/heroes/E4-段煨.png) 段煨 男 汉 4体力 HAN017
-8. ![马腾](../assets/images/heroes/E4-马腾.png) 马腾 男 汉 4体力 HAN018
+6. ![杨彪](../assets/images/heroes/E4-杨彪.png) 杨彪 男 汉 3体力 HAN018
+7. ![段煨](../assets/images/heroes/E4-段煨.png) 段煨 男 汉 4体力 HAN019
+8. ![马腾](../assets/images/heroes/E4-马腾.png) 马腾 男 汉 4体力 HAN020
 
 ----
 
