@@ -6,13 +6,13 @@ from enum import Enum, IntEnum
 from typing import Optional
 
 
-class Suit(IntEnum):
+class Suit(Enum):
     """花色枚举类"""
-    NO_SUIT = 0     # 无色牌
-    SPADE = 1
-    HEART = 2
-    CLUB = 3
-    DIAMOND = 4
+    NO_SUIT = "无花色"
+    SPADE = "♠"
+    HEART = "♥"
+    CLUB = "♣"
+    DIAMOND = "♦"
 
 
 class Value(IntEnum):
@@ -59,21 +59,21 @@ class CardType(CardTypeValue, Enum):
     # B = Basic
     B_DEFAULT = ("基本牌", None, None)
 
-    B_SLASH_DEFAULT = ("基本牌", "杀", None)
-    B_SLASH_COMMON = ("基本牌", "杀", "普通杀")
-    B_SLASH_THUNDER = ("基本牌", "杀", "雷杀")
-    B_SLASH_FIRE = ("基本牌", "杀", "火杀")
-    B_SLASH_ICE = ("基本牌", "杀", "冰杀")
-    B_SLASH_SHOT = ("基本牌", "杀", "射杀")
-    B_SLASH_ASS = ("基本牌", "杀", "暗杀")
-    B_SLASH_BLOOD = ("基本牌", "杀", "血杀")
+    B_STRIKE_DEFAULT = ("基本牌", "杀", None)
+    B_STRIKE_COMMON = ("基本牌", "杀", "普通杀")
+    B_STRIKE_THUNDER = ("基本牌", "杀", "雷杀")
+    B_STRIKE_FIRE = ("基本牌", "杀", "火杀")
+    B_STRIKE_ICE = ("基本牌", "杀", "冰杀")
+    B_STRIKE_SHOT = ("基本牌", "杀", "射杀")
+    B_STRIKE_ASS = ("基本牌", "杀", "暗杀")
+    B_STRIKE_BLOOD = ("基本牌", "杀", "血杀")
 
     B_DODGE = ("基本牌", "闪", None)
     B_PEACH = ("基本牌", "桃", None)
     B_SPIRITS = ("基本牌", "酒", None)
     B_POISON = ("基本牌", "毒", None)
 
-    # S = Strategy
+    # S = Scroll
     S_DEFAULT = ("锦囊牌", None, None)
     S_COMMON = ("锦囊牌", "普通锦囊牌", None)
     S_DELAYED = ("锦囊牌", "延时锦囊牌", None)
@@ -93,40 +93,41 @@ class CardType(CardTypeValue, Enum):
         return self.value.t1 == "基本牌"
 
     @property
-    def is_strategy(self):
-        return self.value in [
-            CardType.S_DEFAULT,
-            CardType.S_COMMON,
-            CardType.S_DELAYED,
-        ]
+    def is_scroll(self):
+        return self.value.t1 == "锦囊牌"
 
     @property
     def is_equipment(self):
-        return self.value in [
-            CardType.E_DEFAULT,
-            CardType.E_WEAPON,
-            CardType.E_ARMOR,
-            CardType.E_HORSE_ATK,
-            CardType.E_HORSE_DEF,
-            CardType.E_TREASURE,
-        ]
+        return self.value.t1 == "装备牌"
 
     # === Sub type checks === #
 
     @property
-    def is_slash(self):
+    def is_strike(self):
         return self.value.t1 == "基本牌" and self.value.t2 == "杀"
 
     # === Other type checks === #
 
-    @property
-    def is_immediate(self):
-        """即时牌（【杀】或普通锦囊牌）"""
-        return self.is_basic or self.value == CardType.S_COMMON
+
+class Area(Enum):
+    INVALID = "无效区域"
+
+    DECK = "牌堆"
+    DISCARDED = "弃牌堆"
+    HAND = "手牌区"
+    HAND_VISIBLE = "明置手牌区"
+    EQUIPMENT = "装备区"
+    JUDGE = "判定区"
+    PROCESSING = "处理区"
+    EXCLUDED = "除外区"
+    REN = "仁区"
 
 
 @dataclasses.dataclass
 class Card:
+    extension: str  # 所属扩展
+
     suit: Suit
     value: Value
     type: CardType
+    area: Area = Area.INVALID

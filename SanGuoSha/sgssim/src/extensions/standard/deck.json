@@ -1,0 +1,12 @@
+[
+    {
+        "suit": "♠",
+        "value": 8,
+        "prototype": "杀"
+    },
+    {
+        "suit": "♠",
+        "value": 9,
+        "prototype": "杀"
+    }
+]
