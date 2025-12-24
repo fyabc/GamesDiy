@@ -4,14 +4,14 @@
 import logging
 
 
-def setup_logging():
+def setup_logging(log_level: str = 'WARNING'):
     from rich.logging import RichHandler
     handlers = [RichHandler()]
 
     logging.basicConfig(
         format='%(message)s',
         datefmt='%m/%d %H:%M:%S',
-        level=logging.INFO,
+        level=log_level.upper(),
         handlers=handlers,
     )
 

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sgssim"
+version = "0.0.1"
+authors = [
+    {name="fyabc", email="fyabc@mail.ustc.edu.cn"},
+]
+description = "A simple SanGuoSha simulator"
+readme = "README.md"
+license = {file="LICENSE"}
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'rich >= 12.5.1',
+]
+
+[project.optional-dependencies]
+tui = [
+    'textual >= 0.1.18',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/fyabc/MyHearthStone"
+
+[project.scripts]
+"sgssim" = "sgssim.scripts.main:main"
+
+[tool.setuptools.package-data]
+"MyHearthStone.package_data" = ["*"]
+"MyHearthStone.package_data.examples" = ["*"]
+"MyHearthStone.package_data.l10n" = ["*"]
+"MyHearthStone.ui.ui_kivy" = ["*.kv"]

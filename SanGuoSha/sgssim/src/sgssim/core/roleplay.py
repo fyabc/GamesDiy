@@ -1,18 +1,18 @@
 #! /usr/bin/env python
 # -*- encoding: utf-8 -*-
 
-from typing import List
+from enum import Enum
 
 from .deck import Deck
+from .engine import BaseEngine
 from .player import Player
 
 
-class BaseEngine:
-    def __init__(self):
-        pass
-
-    def run(self):
-        pass
+class Roles(Enum):
+    MONARCH = "主公"
+    MINISTER = "忠臣"
+    REBEL = "反贼"
+    TURN_COAT = "内奸"
 
 
 class RolePlayEngine(BaseEngine):
@@ -21,5 +21,5 @@ class RolePlayEngine(BaseEngine):
     def __init__(self):
         super().__init__()
 
-        self.players: List[Player] = []
+        self.players: list[Player] = []
         self.deck: Deck = Deck()

@@ -5,6 +5,10 @@ import dataclasses
 from enum import Enum, IntEnum
 from typing import Optional
 
+# Types.
+CardIDType = str
+CardProtoDB = dict[CardIDType, 'CardProto']
+
 
 class Suit(Enum):
     """花色枚举类"""
@@ -72,6 +76,7 @@ class CardType(CardTypeValue, Enum):
     B_PEACH = ("基本牌", "桃", None)
     B_SPIRITS = ("基本牌", "酒", None)
     B_POISON = ("基本牌", "毒", None)
+    B_SHADOW = ("基本牌", "影", None)
 
     # S = Scroll
     S_DEFAULT = ("锦囊牌", None, None)
@@ -124,10 +129,32 @@ class Area(Enum):
 
 
 @dataclasses.dataclass
+class CardProto:
+    """Card prototype, include general card attributed (id, name, type, play, etc.).
+
+    Extensions should extend this class to add their new cards.
+    """
+
+    id: CardIDType
+    name: str
+    type: CardType
+
+    def play(self):
+        """Play this card."""
+
+
+@dataclasses.dataclass
 class Card:
+    """Card instance, include card-specific attributes (suit, value, area, etc.)."""
+
+    proto: CardProto
+
     extension: str  # 所属扩展
 
     suit: Suit
     value: Value
-    type: CardType
     area: Area = Area.INVALID
+
+    @classmethod
+    def from_json(cls, card_json: dict) -> 'Card':
+        pass
