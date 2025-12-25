@@ -14,22 +14,22 @@ class Skill:
     tags: list[str]     # 技能标签（主公技、锁定技等）
 
 
-class ViewAsSkill(Skill):
-    """视为技
-
-    例：官方标关羽【武圣】。
-    """
-
-
 class ActiveSkill(Skill):
-    """主动技
+    """主动技：可以在出牌阶段空闲时间点使用的技能。
 
     例：官方标貂蝉【离间】。
     """
 
 
+class TriggerSkill(Skill):
+    """触发技：在某条件下可被触发的技能。
+
+    例：官方标黄月英【集智】。
+    """
+
+
 class AuraSkill(Skill):
-    """光环技
+    """光环技：在某条件下固定生效的技能。
 
     例：官方标陆逊【谦逊】。
     """

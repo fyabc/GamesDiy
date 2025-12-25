@@ -13,8 +13,8 @@ class BaseEngine:
     def setup(self):
         logging.info('Initializing engine ...')
 
-        for ext_id, extension in ALL_EXTENSIONS.items():
-            logging.info(f'Including extension {ext_id!r} into engine ...')
+        for extension in sorted(ALL_EXTENSIONS.values(), key=lambda ext: (ext.priority, ext.id)):
+            logging.info(f'Including extension {extension.id!r} into engine ...')
             pass
 
     def run(self):

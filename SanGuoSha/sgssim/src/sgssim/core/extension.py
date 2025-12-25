@@ -2,7 +2,8 @@
 # -*- encoding: utf-8 -*-
 
 """Extension class and utility functions."""
-
+import sys
+import uuid
 from importlib import util
 import logging
 
@@ -84,8 +85,15 @@ def add_extension_from_path(path: Path):
         logging.error(f"Extension package '{path}' does not contain __init__.py, skip.")
         return
 
-    spec = util.spec_from_file_location("extension", init_path)
+    unique_id = str(uuid.uuid4()).replace('-', '_')[:8]
+    module_name = f'sgs_extension_{unique_id}'
+
+    spec = util.spec_from_file_location(module_name, init_path)
     module = util.module_from_spec(spec)
+
+    assert module_name not in sys.modules
+    sys.modules[module_name] = module   # Handle relative imports in the extension.
+
     spec.loader.exec_module(module)
 
     get_extension_func = getattr(module, "get_extension", None)

@@ -2,24 +2,11 @@
 # -*- encoding: utf-8 -*-
 
 import argparse
-import logging
 
-from rich.console import Console
-
-from sgssim.core.card import CardType
 from sgssim.core.extension import load_all_extensions
 from sgssim.core.roleplay import RolePlayEngine
 from sgssim.support.logging_utils import setup_logging
-
-console = Console()
-
-
-def _debug(args):
-    for ct in CardType:
-        logging.info(repr(ct))
-
-    # app = SGSApp()
-    # app.run()
+from sgssim.ui.cli import SgsCliApp
 
 
 def main():
@@ -45,7 +32,9 @@ def main():
 
     engine = RolePlayEngine()
     engine.setup()
-    engine.run()
+
+    app = SgsCliApp(engine)
+    app.run()
 
 
 if __name__ == '__main__':

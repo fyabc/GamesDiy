@@ -3,7 +3,10 @@
 
 import dataclasses
 from enum import Enum, IntEnum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from .agents.agent import Agent
 
 # Types.
 CardIDType = str
@@ -128,7 +131,6 @@ class Area(Enum):
     REN = "仁区"
 
 
-@dataclasses.dataclass
 class CardProto:
     """Card prototype, include general card attributed (id, name, type, play, etc.).
 
@@ -139,7 +141,7 @@ class CardProto:
     name: str
     type: CardType
 
-    def play(self):
+    def play(self, agent: 'Agent'):
         """Play this card."""
 
 
