@@ -158,5 +158,21 @@ class Card:
     area: Area = Area.INVALID
 
     @classmethod
-    def from_json(cls, card_json: dict) -> 'Card':
-        pass
+    def from_json(cls, card_protos: CardProtoDB, card_dict: dict, extension: str) -> 'Card':
+        card_id = card_dict.get('id', None)
+        if card_id is None:
+            raise ValueError(f'Card dict {card_dict} does not contains `id` field.')
+        assert isinstance(card_id, str)
+        card_proto = card_protos.get(card_id, None)
+        if card_proto is None:
+            raise ValueError(f'Card proto {card_id!r} does not exists.')
+
+        suit = Suit(card_dict.get('suit', None))
+        value = Value(card_dict.get('value', None))
+
+        return cls(
+            proto=card_proto,
+            extension=extension,
+            suit=suit,
+            value=value,
+        )

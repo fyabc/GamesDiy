@@ -50,8 +50,36 @@ class Hero:
     gender: Gender
     init_hp: int
     init_max_hp: int
-    armor: int
+    init_armor: int
 
     skills: list['Skill'] = dataclasses.field(default_factory=list)
 
     perfect_matches: list[str] = dataclasses.field(default_factory=list)    # 珠联璧合
+
+
+DUMMY_HEROES = [
+    Hero(
+        id="士兵-男",
+        name="士兵-男",
+        faction="群",
+        sub_faction="群",
+        gender=Gender.MALE,
+        init_hp=4,
+        init_max_hp=4,
+        init_armor=0,
+        skills=[],
+        perfect_matches=["士兵-女"],
+    ),
+    Hero(
+        id="士兵-女",
+        name="士兵-女",
+        faction="群",
+        sub_faction="群",
+        gender=Gender.FEMALE,
+        init_hp=4,
+        init_max_hp=4,
+        init_armor=0,
+        skills=[],
+        perfect_matches=[],
+    ),
+]

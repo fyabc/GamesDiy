@@ -3,12 +3,56 @@
 
 from textual.app import App, ComposeResult
 from textual.containers import Vertical, Container
-from textual.widgets import Static, Input
+from textual.screen import Screen
+from textual.widgets import Static, Input, Button
 
-from ...core.engine import BaseEngine
+from ...core.engines import BaseEngine
+
+
+class MainScreen(Screen):
+    """主界面，选择游戏选项"""
+
+    name = "main"
+
+    def compose(self) -> ComposeResult:
+        with Vertical(id="main-container", classes="container"):
+            yield Static("欢迎来到 三国杀 模拟器", id="game-info")
+            yield Button("开始游戏", id="start-game")
+
+    def on_mount(self) -> None:
+        self.main_container = self.get_widget_by_id("main-container")
+        self.main_container.border_title = "[ 三 国 杀 模 拟 器 ]"
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        self.notify(f'{event.button} button pressed')
 
 
 class SgsCliApp(App):
+    CSS = """
+    .container {
+        height: 1fr; 
+        border: solid green;
+        border-title-color: white;
+        /* border-title-background: black; */
+        border-title-align: center;
+        padding: 1;
+    }
+    """
+
+    BINDINGS = [
+        ("ctrl+q", "quit", "Quit"),
+    ]
+
+    def __init__(self, engine: BaseEngine):
+        super().__init__()
+
+        self.engine = engine
+
+    def on_mount(self) -> None:
+        self.push_screen(MainScreen())
+
+
+class SgsCliAppLegacy(App):
     CSS = """
     #main-area {
         height: 1fr; 

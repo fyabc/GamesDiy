@@ -2,18 +2,22 @@
 # -*- encoding: utf-8 -*-
 
 """Extension class and utility functions."""
+
+import json
+import logging
 import sys
 import uuid
-from importlib import util
-import logging
-
-from pathlib import Path
-from typing import Dict
 from enum import IntEnum
+from importlib import util
+from pathlib import Path
+from typing import Dict, Any
 
 from .card import CardProtoDB
 from .hero import HeroDB
 from .skill import SkillDB
+
+
+CardListType = list[dict[str, Any]]
 
 
 class ExtensionPriority(IntEnum):
@@ -52,9 +56,11 @@ class Extension:
         self.heroes = heroes or {}
         self.skills = skills or {}
 
-    def _get_card_list(self):
-        """Get card list, and check its format."""
-        pass
+        self.card_list: CardListType = []
+        card_list_path = ext_root_path / "card_list.json"
+        if card_list_path.exists():
+            with open(card_list_path, 'r', encoding='utf-8') as f:
+                self.card_list = json.load(f)
 
 
 BUILTIN_EXTENSION_ROOT = Path(__file__).absolute().parent.parent / 'extensions'

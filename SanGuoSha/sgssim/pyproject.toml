@@ -30,7 +30,8 @@ tui = [
 "Homepage" = "https://github.com/fyabc/MyHearthStone"
 
 [project.scripts]
-"sgssim" = "sgssim.scripts.main:main"
+"sgs-run" = "sgssim.scripts.run:main"
+"sgs-sim" = "sgssim.scripts.simulate:main"
 
 [tool.setuptools.package-data]
 "MyHearthStone.package_data" = ["*"]
