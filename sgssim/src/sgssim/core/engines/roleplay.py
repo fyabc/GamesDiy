@@ -31,6 +31,10 @@ class Roles(Enum):
 
 
 BUILTIN_RP_CONFIGS = {
+    '1-0-1-0': {
+        'mode': 'roleplay',
+        'roles': {'主公': 1, '反贼': 1},
+    },
     '1-1-2-1': {
         'mode': 'roleplay',
         'roles': {'主公': 1, '忠臣': 1, '反贼': 2, '内奸': 1},
@@ -41,6 +45,8 @@ BUILTIN_RP_CONFIGS = {
     },
 }
 BUILTIN_RP_CONFIGS['8'] = BUILTIN_RP_CONFIGS['1-2-4-1']
+BUILTIN_RP_CONFIGS['5'] = BUILTIN_RP_CONFIGS['1-1-2-1']
+BUILTIN_RP_CONFIGS['2'] = BUILTIN_RP_CONFIGS['1-0-1-0']
 
 
 class RolePlayEngine(BaseEngine):
@@ -83,6 +89,10 @@ class RolePlayEngine(BaseEngine):
             selected = agent.choose_heroes(candidates)[0]
             player.heroes = [selected]
 
+        # Initialize player states (hp, max_hp, armor).
+        for player in self.players:
+            self.init_player_state(player)
+
         logging.info(f"Roleplay game setup finished.")
 
     def init_player_state(self, player):
@@ -99,7 +109,8 @@ class RolePlayEngine(BaseEngine):
         return player.extras['role'].colored_value + ' ' + super().show_player_state(player)
 
     def check_game_end(self) -> bool:
-        # TODO
-        if self.current_turn >= 16:
+        # TODO: Replace with proper game end logic.
+        max_turns = self.config.get('max_turns', 1_000_000)
+        if self.current_turn >= max_turns:
             return True
         return False

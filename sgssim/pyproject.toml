@@ -25,6 +25,9 @@ dependencies = [
 tui = [
     'textual >= 0.1.18',
 ]
+dev = [
+    'pytest >= 7.0',
+]
 
 [project.urls]
 "Homepage" = "https://github.com/fyabc/MyHearthStone"

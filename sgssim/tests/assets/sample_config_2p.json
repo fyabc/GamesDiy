@@ -1,0 +1,8 @@
+{
+    "mode": "roleplay",
+    "roles": {
+        "主公": 1,
+        "反贼": 1
+    },
+    "max_turns": 3
+}
