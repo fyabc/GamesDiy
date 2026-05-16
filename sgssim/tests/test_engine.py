@@ -89,17 +89,17 @@ class TestEngineRun:
     def test_run_completes(self):
         """Engine should finish after reaching turn limit."""
         engine = create_engine_from_config('builtin:rp:2')
-        engine.config = dict(engine.config, max_turns=5)  # Fresh copy
+        engine.config = dict(engine.config, max_turns=5)
         engine.setup(run_config={})
         engine.run()
-        assert engine.current_turn >= 5
+        assert engine.current_turn == 4
 
     def test_run_with_seed(self):
         engine = create_engine_from_config('builtin:rp:2', seed=42)
-        engine.config = dict(engine.config, max_turns=5)  # Fresh copy
+        engine.config = dict(engine.config, max_turns=5)
         engine.setup(run_config={})
         engine.run()
-        assert engine.current_turn >= 5
+        assert engine.current_turn == 4
 
 
 class TestJsonConfig:
@@ -128,7 +128,7 @@ class TestJsonConfig:
         engine = create_engine_from_config(config_path)
         engine.setup(run_config={})
         engine.run()
-        assert engine.current_turn >= 3
+        assert engine.current_turn == 2  # max_turns=3 means 3 turns (0,1,2)
 
 
 class TestMaxTurns:
@@ -142,7 +142,7 @@ class TestMaxTurns:
         engine.config = dict(engine.config, max_turns=10)
         engine.setup(run_config={})
         engine.run()
-        assert engine.current_turn >= 10
+        assert engine.current_turn == 9  # max_turns=10 means turns 0..9
 
 
 class TestNextTurn:
@@ -159,10 +159,7 @@ class TestNextTurn:
         engine = create_engine_from_config('builtin:rp:2')
         engine.config = dict(engine.config, max_turns=1)
         engine.setup(run_config={})
-        # First call: check_game_end sees current_turn=0 < 1, advances to turn 1.
-        assert engine.next_turn() is False
-        assert engine.current_turn == 1
-        # Second call: check_game_end sees current_turn=1 >= 1, ends game.
+        # current_turn=0, 0+1 >= 1 means game ends immediately.
         assert engine.next_turn() is True
 
 

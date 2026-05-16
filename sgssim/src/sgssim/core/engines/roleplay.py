@@ -4,7 +4,7 @@ import logging
 from enum import Enum
 from typing import Optional, Any
 
-from .engine import BaseEngine
+from .engine import BaseEngine, console
 from ..player import Player
 from ..hero import DUMMY_HEROES
 
@@ -111,6 +111,8 @@ class RolePlayEngine(BaseEngine):
     def check_game_end(self) -> bool:
         # TODO: Replace with proper game end logic.
         max_turns = self.config.get('max_turns', 1_000_000)
-        if self.current_turn >= max_turns:
+        if self.current_turn + 1 >= max_turns:
+            if self.echo:
+                console.print(f'[red]engine: 达到最大回合数 {max_turns}，游戏结束[/]')
             return True
         return False

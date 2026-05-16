@@ -125,6 +125,11 @@ class BaseEngine:
         else:
             return self._next_player_idx
 
+    def _echo_turn(self):
+        """Echo the current turn info: 第M轮 玩家N 总第P回合."""
+        if self.echo:
+            console.print(f'[cyan]engine: 第{self.current_round + 1}轮 玩家{self.current_player_idx + 1} 总第{self.current_turn + 1}回合[/]')
+
     def next_turn(self) -> bool:
         """Move to next turn.
 
@@ -142,8 +147,7 @@ class BaseEngine:
             # 处理额外回合
             self.current_player_idx = self._extra_turns.popleft()
             self.current_turn += 1
-            if self.echo:
-                console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
+            self._echo_turn()
             self.push_event(TurnStart(self.current_turn))
         else:
             if self._next_player_idx == 0:
@@ -154,15 +158,13 @@ class BaseEngine:
                 self.current_round += 1
                 self.current_turn += 1
                 self.push_event(RoundStart(self.current_round))
-                if self.echo:
-                    console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
+                self._echo_turn()
                 self.push_event(TurnStart(self.current_turn))
             else:
                 self.current_player_idx = self._next_player_idx
                 self._next_player_idx = (self._next_player_idx + 1) % len(self.players)
                 self.current_turn += 1
-                if self.echo:
-                    console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
+                self._echo_turn()
                 self.push_event(TurnStart(self.current_turn))
 
         return False
@@ -186,15 +188,14 @@ class BaseEngine:
 
         # Dispatch initial hands.
         if self.echo:
-            console.print('[cyan]P> 分配起始手牌[/]')
+            console.print('[cyan]engine: 分配起始手牌[/]')
 
             from .events.card_events import DispatchInitHand
             for player_idx, player in enumerate(self.players):
                 self.push_event(DispatchInitHand(player_idx, 4))
 
         self.push_event(RoundStart(self.current_round))
-        if self.echo:
-            console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
+        self._echo_turn()
         self.push_event(TurnStart(self.current_turn))
 
         # Game loop.
