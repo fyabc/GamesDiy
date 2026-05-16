@@ -97,7 +97,7 @@ class RolePlayEngine(BaseEngine):
 
     def init_player_state(self, player):
         hero = player.heroes[0]
-        if player.extras['role'] == Roles.MONARCH:
+        if player.extras['role'] == Roles.MONARCH and self.num_players >= 5:
             player.hp = hero.init_hp + 1
             player.max_hp = hero.init_max_hp + 1
         else:

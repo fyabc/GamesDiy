@@ -49,15 +49,23 @@ class TestEngineSetup:
         assert Roles.MONARCH in roles
         assert Roles.REBEL in roles
 
-    def test_monarch_hp_bonus(self, engine_2p):
-        for player in engine_2p.players:
+    def test_monarch_hp_bonus(self, engine_5p):
+        """Monarch gets +1 HP only when total players >= 5."""
+        for player in engine_5p.players:
             if player.extras['role'] == Roles.MONARCH:
                 hero = player.heroes[0]
                 assert player.max_hp == hero.init_max_hp + 1
                 assert player.hp == hero.init_hp + 1
 
-    def test_non_monarch_no_hp_bonus(self, engine_2p):
+    def test_monarch_no_hp_bonus_in_2p(self, engine_2p):
+        """2-player monarch should NOT get +1 HP bonus."""
         for player in engine_2p.players:
+            hero = player.heroes[0]
+            assert player.max_hp == hero.init_max_hp
+            assert player.hp == hero.init_hp
+
+    def test_non_monarch_no_hp_bonus(self, engine_5p):
+        for player in engine_5p.players:
             if player.extras['role'] != Roles.MONARCH:
                 hero = player.heroes[0]
                 assert player.max_hp == hero.init_max_hp
