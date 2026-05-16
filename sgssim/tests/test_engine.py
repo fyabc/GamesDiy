@@ -145,6 +145,24 @@ class TestMaxTurns:
         assert engine.current_turn >= 10
 
 
+class TestNextTurn:
+    def test_next_turn_returns_false_when_game_continues(self):
+        """next_turn should return False when game should continue."""
+        engine = create_engine_from_config('builtin:rp:2')
+        engine.config = dict(engine.config, max_turns=10)
+        engine.setup(run_config={})
+        result = engine.next_turn()
+        assert result is False
+
+    def test_next_turn_returns_true_when_game_ends(self):
+        """next_turn should return True when game should end."""
+        engine = create_engine_from_config('builtin:rp:2')
+        engine.config = dict(engine.config, max_turns=1)
+        engine.setup(run_config={})
+        result = engine.next_turn()
+        assert result is True
+
+
 class TestBuiltinConfigs:
     def test_2_is_alias(self):
         assert BUILTIN_RP_CONFIGS['2'] is BUILTIN_RP_CONFIGS['1-0-1-0']

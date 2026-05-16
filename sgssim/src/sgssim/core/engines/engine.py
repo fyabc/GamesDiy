@@ -125,8 +125,11 @@ class BaseEngine:
         else:
             return self._next_player_idx
 
-    def next_turn(self):
-        """Move to next turn."""
+    def next_turn(self) -> bool:
+        """Move to next turn.
+
+        Returns True if the game should end after this turn, False otherwise.
+        """
         from .events.global_events import RoundStart, RoundEnd, TurnStart, TurnEnd
         self.push_event(TurnEnd(self.current_turn))
 
@@ -154,6 +157,8 @@ class BaseEngine:
 
         if self.echo:
             console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
+
+        return self.check_game_end()
 
     def insert_extra_turn(self, player_idx: int):
         self._extra_turns.append(player_idx)
@@ -188,9 +193,6 @@ class BaseEngine:
 
         # Game loop.
         while True:
-            if self.check_game_end():
-                break
-
             from .events.phase_events import (
                 PreparePhaseStart,
                 JudgePhaseStart,
@@ -226,7 +228,8 @@ class BaseEngine:
             self.push_event(EndPhaseStart())
             self.push_event(EndPhaseEnd())
 
-            self.next_turn()
+            if self.next_turn():
+                break
 
         # Game end processing.
 
