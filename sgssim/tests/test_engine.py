@@ -159,8 +159,11 @@ class TestNextTurn:
         engine = create_engine_from_config('builtin:rp:2')
         engine.config = dict(engine.config, max_turns=1)
         engine.setup(run_config={})
-        result = engine.next_turn()
-        assert result is True
+        # First call: check_game_end sees current_turn=0 < 1, advances to turn 1.
+        assert engine.next_turn() is False
+        assert engine.current_turn == 1
+        # Second call: check_game_end sees current_turn=1 >= 1, ends game.
+        assert engine.next_turn() is True
 
 
 class TestBuiltinConfigs:

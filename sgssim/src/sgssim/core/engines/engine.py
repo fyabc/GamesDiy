@@ -128,16 +128,22 @@ class BaseEngine:
     def next_turn(self) -> bool:
         """Move to next turn.
 
-        Returns True if the game should end after this turn, False otherwise.
+        Returns True if the game should end, False otherwise.
         """
         from .events.global_events import RoundStart, RoundEnd, TurnStart, TurnEnd
         self.push_event(TurnEnd(self.current_turn))
+
+        # Check game end before switching to the next turn.
+        if self.check_game_end():
+            return True
 
         # Switch turn.
         if self._extra_turns:
             # 处理额外回合
             self.current_player_idx = self._extra_turns.popleft()
             self.current_turn += 1
+            if self.echo:
+                console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
             self.push_event(TurnStart(self.current_turn))
         else:
             if self._next_player_idx == 0:
@@ -148,17 +154,18 @@ class BaseEngine:
                 self.current_round += 1
                 self.current_turn += 1
                 self.push_event(RoundStart(self.current_round))
+                if self.echo:
+                    console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
                 self.push_event(TurnStart(self.current_turn))
             else:
                 self.current_player_idx = self._next_player_idx
                 self._next_player_idx = (self._next_player_idx + 1) % len(self.players)
                 self.current_turn += 1
+                if self.echo:
+                    console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
                 self.push_event(TurnStart(self.current_turn))
 
-        if self.echo:
-            console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
-
-        return self.check_game_end()
+        return False
 
     def insert_extra_turn(self, player_idx: int):
         self._extra_turns.append(player_idx)
@@ -185,10 +192,9 @@ class BaseEngine:
             for player_idx, player in enumerate(self.players):
                 self.push_event(DispatchInitHand(player_idx, 4))
 
+        self.push_event(RoundStart(self.current_round))
         if self.echo:
             console.print(f'[cyan]P> 第{self.current_round + 1}轮 第{self.current_turn + 1}回合 玩家{self.current_player_idx + 1}[/]')
-
-        self.push_event(RoundStart(self.current_round))
         self.push_event(TurnStart(self.current_turn))
 
         # Game loop.
