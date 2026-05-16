@@ -4,6 +4,9 @@
 # JetBrains PyCharm IDE
 .idea/
 
+# Claude Code
+/.claude/settings.local.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -110,7 +113,7 @@ ENV/
 .mypy_cache/
 
 # HearthStone Resources
-/HearthStone/HS-Resources/data/*
+/OtherGames/HearthStone/HS-Resources/data/*
 
 # QSanGuoSha Data
 /SanGuoSha/SGS-Scripts/QSGS-Data/
