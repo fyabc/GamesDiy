@@ -10,6 +10,16 @@ if TYPE_CHECKING:
     from ..hero import Hero
 
 
+class ActionChoice:
+    """Choice of player action."""
+    pass
+
+
+class Action:
+    """Player action, selected from ActionChoice."""
+    pass
+
+
 class Agent:
     """Agent base class.
 
