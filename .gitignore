@@ -114,3 +114,6 @@ ENV/
 
 # Private Files
 /private/
+
+# Claude private notes
+.claude/notes/
