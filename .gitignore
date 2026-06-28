@@ -82,9 +82,6 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# pyenv
-.python-version
-
 # celery beat schedule file
 celerybeat-schedule
 
@@ -115,5 +112,5 @@ ENV/
 # HearthStone Resources
 /OtherGames/HearthStone/HS-Resources/data/*
 
-# QSanGuoSha Data
-/SanGuoSha/SGS-Scripts/QSGS-Data/
+# Private Files
+/private/

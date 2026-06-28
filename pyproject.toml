@@ -1,0 +1,6 @@
+[tool.uv.workspace]
+members = [
+    "packages/*",
+    # 未来新增子包放在 packages/ 下，例如：
+    # packages/zhihu-exporter/
+]

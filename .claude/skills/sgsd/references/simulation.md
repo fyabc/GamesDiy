@@ -2,16 +2,21 @@
 
 ## 前置条件
 
-sgssim 已安装在 `sgssim/` 目录下，通过 pip editable 模式安装。
+sgssim 是仓库根目录 uv workspace 的子包，位于 `packages/sgssim/` 目录下。
 
-CLI 入口：
-- `sgs-run` — 启动完整游戏（含 UI）
-- `sgs-sim` — 批量模拟
+CLI 入口（在仓库根目录或 packages/sgssim/ 目录下通过 `uv run` 执行）：
+- `uv run sgs-run` — 启动完整游戏（含 UI）
+- `uv run sgs-sim` — 批量模拟
+
+环境初始化（首次使用时，在仓库根目录）：
+```bash
+uv sync --all-extras
+```
 
 ## 快速模拟
 
 ```bash
-sgs-sim -n 1000 -s 42
+uv run sgs-sim -n 1000 -s 42
 ```
 
 参数说明：
@@ -24,13 +29,13 @@ sgs-sim -n 1000 -s 42
 
 ### 方法一：修改标准扩展
 
-编辑 `sgssim/src/sgssim/extensions/standard/heroes.py`，按现有格式添加武将定义。
+编辑 `packages/sgssim/src/sgssim/extensions/standard/heroes.py`，按现有格式添加武将定义。
 
-编辑 `sgssim/src/sgssim/extensions/standard/cards.py` 添加专属卡牌。
+编辑 `packages/sgssim/src/sgssim/extensions/standard/cards.py` 添加专属卡牌。
 
 ### 方法二：新建扩展
 
-在 `sgssim/src/sgssim/extensions/` 下新建扩展目录，参考 `standard/` 的结构：
+在 `packages/sgssim/src/sgssim/extensions/` 下新建扩展目录，参考 `standard/` 的结构：
 
 ```
 extensions/<ext_name>/
@@ -42,7 +47,7 @@ extensions/<ext_name>/
 
 ### 武将定义格式（Python）
 
-参考 `sgssim/src/sgssim/core/hero.py` 中的 `Hero` 类定义，以及 `extensions/standard/heroes.py` 中的实例。
+参考 `packages/sgssim/src/sgssim/core/hero.py` 中的 `Hero` 类定义，以及 `extensions/standard/heroes.py` 中的实例。
 
 基本结构：
 ```python
@@ -60,7 +65,7 @@ hero_name = Hero(
 
 ### 技能定义格式
 
-参考 `sgssim/src/sgssim/core/skill.py`。
+参考 `packages/sgssim/src/sgssim/core/skill.py`。
 
 ## 解析模拟结果
 
@@ -88,7 +93,7 @@ hero_name = Hero(
 ### 标准 8 人局
 
 ```bash
-sgs-sim -n 100 -s 42 -c <config_with_8_players>
+uv run sgs-sim -n 100 -s 42 -c <config_with_8_players>
 ```
 
 ### 对比测试（两个版本）
@@ -98,7 +103,7 @@ sgs-sim -n 100 -s 42 -c <config_with_8_players>
 ### 压力测试
 
 ```bash
-sgs-sim -n 10000 -s 12345
+uv run sgs-sim -n 10000 -s 12345
 ```
 
 大量模拟以获取稳定的统计结果。

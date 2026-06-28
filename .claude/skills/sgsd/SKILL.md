@@ -97,9 +97,9 @@ description: Design SanGuoSha (三国杀) heroes, cards, and scenes interactivel
 当用户要求或设计为武将时主动提议。详见 `references/simulation.md`。
 
 基本流程：
-1. 将武将定义写入 sgssim 扩展（`sgssim/src/sgssim/extensions/standard/heroes.py` 或新建扩展）
+1. 将武将定义写入 sgssim 扩展（`packages/sgssim/src/sgssim/extensions/standard/heroes.py` 或新建扩展）
 2. 配置模拟参数（局数、随机种子、AI 代理类型）
-3. 运行 `sgs-sim -n <局数>` 
+3. 运行 `uv run sgs-sim -n <局数>`（在仓库根目录或 packages/sgssim/ 下均可）
 4. 解析输出，统计胜率、平均轮收益
 5. 生成简要报告，与理论值对比
 
